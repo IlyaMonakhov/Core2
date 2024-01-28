@@ -2,6 +2,8 @@ package task.collection;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Collection {
     public static void main(String[] args) {
@@ -20,14 +22,18 @@ public class Collection {
         //int element = 46;
         //contentElement(listNumbers, element);
         //System.out.println(listNumbers.contains(element));
-        ArrayList<Integer> listNumbersTwo = new ArrayList<>();
-        listNumbersTwo.add(12);
-        listNumbersTwo.add(33);
-        listNumbersTwo.add(255);
-        listNumbersTwo.add(133);
-        listNumbersTwo.add(555);
+        Set<String> setNames = new HashSet<>();
+        setNames.add("Zaur");
+        setNames.add("Marina");
+        setNames.add("Igor");
+        setNames.add("Misha");
+        Set<String> setNamesTwo = new HashSet<>();
+        setNamesTwo.add("Ilya");
+        setNamesTwo.add("Egor");
+        setNamesTwo.add("Denis");
+        //System.out.println(setNames.contains("Zaur"));
+        //System.out.println(intersection(setNames , setNamesTwo));
 
-        System.out.println(enumerationTwoElements(listNumbers,listNumbersTwo));
 
 
     }
@@ -62,20 +68,22 @@ public class Collection {
     }
 
     // TODO: Проверить, содержит ли множество определенный элемент.
-    public static boolean contentElement(ArrayList<Integer> listNumbers, int element) {
-        return listNumbers.contains(element);
+    public static boolean contentElement(Set<String> names) {
+        return names.contains("Zaur");
     }
 
     // TODO: Найти пересечение двух множеств.
-    public static boolean enumerationTwoElements(ArrayList<Integer> listNumbers,ArrayList<Integer> listNumbersTwo){
-
+    public static boolean intersection(Set setNames , Set setNamesTwo){
+        return setNamesTwo.retainAll(setNames);
     }
 
-
-
     // TODO: Удалить все элементы из множества, которые также содержатся в другом множестве.
+    public static void  recurringRemoval(Set setNames , Set setNamesTwo){
+       setNames.removeAll(setNamesTwo);
+    }
 
     // TODO: Проверить, содержит ли карта определенный ключ.
+
 
     // TODO: Получить все значения, связанные с определенным ключом.
 
