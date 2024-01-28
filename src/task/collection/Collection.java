@@ -1,8 +1,33 @@
 package task.collection;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Collection {
     public static void main(String[] args) {
+        ArrayList<Integer> listNumbers = new ArrayList<>();
+        listNumbers.add(12);
+        listNumbers.add(55);
+        listNumbers.add(33);
+        listNumbers.add(33);
+        listNumbers.add(22);
+        listNumbers.add(46);
+        //System.out.println(maxNumbers(listNumbers));
+        //removeDuplicates(listNumbers);
+        //System.out.println(listNumbers);
+        //sortDescendingOrder(listNumbers);
+        //System.out.println(listNumbers);
+        //int element = 46;
+        //contentElement(listNumbers, element);
+        //System.out.println(listNumbers.contains(element));
+        ArrayList<Integer> listNumbersTwo = new ArrayList<>();
+        listNumbersTwo.add(12);
+        listNumbersTwo.add(33);
+        listNumbersTwo.add(255);
+        listNumbersTwo.add(133);
+        listNumbersTwo.add(555);
 
+        System.out.println(enumerationTwoElements(listNumbers,listNumbersTwo));
 
 
     }
@@ -13,13 +38,40 @@ public class Collection {
 
     // TODO: Найти наибольший элемент в списке.
 
+    public static int maxNumbers(ArrayList<Integer> listNumbers) {
+        int max = Integer.MIN_VALUE;
+        for (int number : listNumbers) {
+            if (number > max) {
+                max = number;
+            }
+        }
+        return max;
+
+    }
+
     // TODO: Удалить все дубликаты из списка.
+    public static void removeDuplicates(ArrayList<Integer> listNumbers) {
+        listNumbers.remove(3);
+        System.out.println(listNumbers);
+    }
 
     // TODO: Отсортировать список в порядке убывания.
+    public static ArrayList<Integer> sortDescendingOrder(ArrayList<Integer> listNumbers) {
+        Collections.sort(listNumbers, Collections.reverseOrder());
+        return listNumbers;
+    }
 
     // TODO: Проверить, содержит ли множество определенный элемент.
+    public static boolean contentElement(ArrayList<Integer> listNumbers, int element) {
+        return listNumbers.contains(element);
+    }
 
     // TODO: Найти пересечение двух множеств.
+    public static boolean enumerationTwoElements(ArrayList<Integer> listNumbers,ArrayList<Integer> listNumbersTwo){
+
+    }
+
+
 
     // TODO: Удалить все элементы из множества, которые также содержатся в другом множестве.
 
