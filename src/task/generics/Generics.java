@@ -13,7 +13,35 @@ public class Generics {
 
     public static void main(String[] args) {
         List<BigBox> Producer = new ArrayList<>();
+        Producer.add(new BigBox());
+        Producer.add(new MediumBox());
+        Producer.add(new MicroBox());
+
         List<BigBox> Consumer = new ArrayList<>();
+        Consumer.add(new SmallBox());
+        Consumer.add(new BigBox());
+        Consumer.add(new MicroBox());
+        Consumer.add(new BigBox());
+        System.out.println("Метод для проверки наличия коробки в списке");
+        SmallBox box = new SmallBox();
+        System.out.println(checkBoxList(Producer,box));
+        System.out.println("Метод для добавления коробок в список (Consumer)");
+        System.out.println(Consumer);
+        addBoxList(Consumer,box);
+        System.out.println(Consumer);
+        System.out.println(" Метод для печати списка коробок (Producer)");
+        printListBox(Producer,box);
+        System.out.println("Метод для копирования коробок из одного списка в другой (Producer и Consumer)");
+        copyingBox(Producer,Consumer);
+        System.out.println(Producer);
+        System.out.println(Consumer);
+
+
+
+
+
+
+
 
 
     }
