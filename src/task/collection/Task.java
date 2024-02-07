@@ -19,33 +19,33 @@ public class Task {
     }
 
     public static void main(String[] args) {
-        List<Task> Tasks = new ArrayList<>();
-        Tasks.add(new Task(1,"Сложение","Выполнена"));
-        Tasks.add(new Task(2,"Вычитание","Не выполнена"));
-        Tasks.add(new Task(1,"Умножение","Выполнена"));
-        printUnfinishedTasks(Tasks);
-        System.out.println(Tasks);
+        List<Task> tasks = new ArrayList<>();
+        tasks.add(new Task(1,"Сложение","Выполнена"));
+        tasks.add(new Task(2,"Вычитание","Не выполнена"));
+        tasks.add(new Task(1,"Умножение","Выполнена"));
+        printUnfinishedTasks(tasks);
+        System.out.println(tasks);
         String title = "Не выполнена";
-        getTasksWithSpecificTitle(Tasks,title);
-        System.out.println(getTasksWithSpecificTitle(Tasks,title));
+        getTasksWithSpecificTitle(tasks,title);
+        System.out.println(getTasksWithSpecificTitle(tasks,title));
 
 
     }
-    public static void printUnfinishedTasks(List<Task> Tasks){
-        for (Task task : Tasks) {
+    public static void printUnfinishedTasks(List<Task> tasks){
+        for (Task task : tasks) {
             if (task.completed.equals("Не выполнена")) {
                 System.out.println("Task ID: " + task.id + ", Title: " + task.title + ", Completed: " + task.completed);
             }
         }
     }
-    public static List<Task> getTasksWithSpecificTitle(List<Task> Tasks, String title) {
-        List<Task> TasksWithSpecificTitle = new ArrayList<>();
-        for (Task task : Tasks) {
+    public static List<Task> getTasksWithSpecificTitle(List<Task> tasks, String title) {
+        List<Task> tasksWithSpecificTitle = new ArrayList<>();
+        for (Task task : tasks) {
             if (task.title.equals(title)) {
-                TasksWithSpecificTitle.add(task);
+                tasksWithSpecificTitle.add(task);
             }
         }
-        return TasksWithSpecificTitle;
+        return tasksWithSpecificTitle;
     }
 }
 

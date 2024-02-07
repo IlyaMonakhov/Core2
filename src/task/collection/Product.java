@@ -18,30 +18,30 @@ public class Product {
     }
 
     public static void main(String[] args) {
-        List<Product> Products = new ArrayList<>();
-        Products.add(new Product(1,"Oil",0));
-        Products.add(new Product(2,"Milk",68));
-        Products.add(new Product(3,"Chocolate",100));
-        Products.add(new Product(4,"Potato",1500));
-        printZeroQuantity(Products);
-        totalQuantity(Products);
-        System.out.println(totalQuantity(Products));
+        List<Product> products = new ArrayList<>();
+        products.add(new Product(1,"Oil",0));
+        products.add(new Product(2,"Milk",68));
+        products.add(new Product(3,"Chocolate",100));
+        products.add(new Product(4,"Potato",1500));
+        printProductsWithZeroQuantity(products);
+        totalQuantity(products);
+        System.out.println(totalQuantity(products));
 
 
 
 
 
     }
-    public static void printZeroQuantity(List<Product> Products){
-        for (Product product : Products){
+    public static void printProductsWithZeroQuantity(List<Product> products){
+        for (Product product : products){
             if (product.quantity == 0){
                 System.out.println(product.id+ " " + product.name+ " " + product.quantity);
             }
         }
     }
-    public static int totalQuantity(List<Product> Products){
+    public static int totalQuantity(List<Product> products){
         int total = 0;
-        for (Product product : Products){
+        for (Product product : products){
             total +=product.quantity;
         }
         return total;

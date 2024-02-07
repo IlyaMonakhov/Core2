@@ -37,13 +37,6 @@ public class Generics {
         System.out.println(Consumer);
 
 
-
-
-
-
-
-
-
     }
 
 

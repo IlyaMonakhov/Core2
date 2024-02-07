@@ -16,16 +16,18 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        List<Student> Students = new ArrayList<>();
-        Students.add(new Student("Masha", 25));
-        Students.add(new Student("Egor",30));
-        Students.add(new Student("Zaur",24));
-        Students.add(new Student("Marina",23));
-        printListStudents(Students);
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("Masha", 25));
+        students.add(new Student("Egor",30));
+        students.add(new Student("Zaur",24));
+        students.add(new Student("Marina",23));
+        printListStudents(students);
+
         int minAge = 26;
-        listMaxAgeStudent(Students,minAge);
+
+        listMaxAgeStudent(students,minAge);
         System.out.println("Возраст больше 26");
-        List<Student> maxAgeStudents = listMaxAgeStudent(Students, minAge);
+        List<Student> maxAgeStudents = listMaxAgeStudent(students, minAge);
         for (Student student : maxAgeStudents) {
             System.out.println(student.name + student.age);
         }
@@ -34,19 +36,19 @@ public class Student {
 
 
     }
-    public static void printListStudents(List<Student> Students) {
-        for (Student student : Students) {
+    public static void printListStudents(List<Student> students) {
+        for (Student student : students) {
             System.out.println(student.name + student.age);
         }
     }
-    public static List<Student> listMaxAgeStudent(List<Student> Students, int minAge){
-        List<Student> MaxAgeStudent = new ArrayList<>();
-        for (Student student : Students){
+    public static List<Student> listMaxAgeStudent(List<Student> students, int minAge){
+        List<Student> maxAgeStudent = new ArrayList<>();
+        for (Student student : students){
             if (student.age > minAge ){
-                MaxAgeStudent.add(student);
+                maxAgeStudent.add(student);
             }
         }
-        return MaxAgeStudent;
+        return maxAgeStudent;
     }
 
 
