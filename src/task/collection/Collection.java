@@ -15,46 +15,62 @@ public class Collection {
         listNumber.add(46);
         System.out.println(maxNumbers(listNumber));
         removeDuplicates(listNumber);
+
         sortDescendingOrder(listNumber);
         System.out.println(listNumber);
+
         Set<String> setNamesFirst = new HashSet<>();
         setNamesFirst.add("Zaur");
         setNamesFirst.add("Marina");
         setNamesFirst.add("Igor");
         setNamesFirst.add("Misha");
+
         String checkingName = "Zaur";
         сheckElement(setNamesFirst , checkingName);
         System.out.println(setNamesFirst.contains("Zaur"));
+
         Set<String> setNamesSecond = new HashSet<>();
         setNamesSecond.add("Ilya");
         setNamesSecond.add("Egor");
         setNamesSecond.add("Denis");
+
         System.out.println(intersection(setNamesFirst, setNamesSecond));
+
         Map<Integer, String> mapNames = new HashMap<>();
         mapNames.put(125, "Ivan");
         mapNames.put(458, "Ilya");
         mapNames.put(555, "Igor");
         mapNames.put(666, "Egor");
         mapNames.put(777, "Masha");
+
         System.out.println(mapNames.containsKey(666));
+
         int key = 555;
         int key2 = 777;
+
         getValues(mapNames, key);
         System.out.println(mapNames.get(666));
+
         removeMapNames(mapNames, key2);
         System.out.println(mapNames);
+
         Stack<String> details = new Stack<>();
         details.push("engine");
         details.push("wheel");
         details.push("mirror");
         details.push("pin");
+
         System.out.println(details);
+
         String elementCar = "brakes";
         addElementStack(details,elementCar);
+
         System.out.println(details);
         popElementStack(details);
+
         System.out.println(details);
         сheckStack(details);
+
         System.out.println(details.isEmpty());
 
 
