@@ -129,13 +129,11 @@ public class Collection {
 
     // TODO: Получить все значения, связанные с определенным ключом.
     public static void getValues(Map<Integer, String> mapNames, int key) {
-        Map<Integer,String> values = new HashMap<>();
         if (mapNames.containsKey(key)) {
-            values.put(key, mapNames.get(key));
+            System.out.println(mapNames.get(key));
         } else {
             System.out.println("Значение для ключа не найдены " + key);
         }
-        System.out.println(values);
     }
 
     // TODO: Удалить все записи из карты, у которых значение равно определенному значению.
