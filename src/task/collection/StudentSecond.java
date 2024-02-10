@@ -8,8 +8,8 @@ public class StudentSecond {
     //  Создайте класс Student с полями name и attendance.
     //  Создайте метод, который будет принимать список студентов и выводить студентов с наихудшей посещаемостью.
     //  Создайте метод, который будет принимать список студентов и возвращать среднюю посещаемость.
-    String name;
-    int attendance;
+    private String name;
+    private int attendance;
     public  StudentSecond (String name, int attendance){
         this.name = name;
         this.attendance = attendance;
@@ -28,6 +28,8 @@ public class StudentSecond {
 
 
     }
+
+
     public static void minAttendance(List<StudentSecond> studentSecondList){
         for (StudentSecond studentSecond : studentSecondList){
             if (studentSecond.attendance < 55){
@@ -35,8 +37,11 @@ public class StudentSecond {
             }
         }
     }
+
+
     public static int averageAttendance(List<StudentSecond> studentSecondList){
         int average = 0;
+
         for (StudentSecond studentSecond : studentSecondList){
             average += studentSecond.attendance;
         }return average / studentSecondList.size();

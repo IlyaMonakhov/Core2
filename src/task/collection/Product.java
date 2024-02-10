@@ -8,9 +8,9 @@ public class Product {
     //  Создайте класс Product с полями id, name и quantity.
     //  Создайте метод, который будет принимать список товаров и выводить только товары с нулевым количеством на складе.
     //  Создайте метод, который будет принимать список товаров и возвращать общее количество товаров на складе.
-    int id;
-    String name;
-    int quantity;
+    private int id;
+    private String name;
+    private int quantity;
     public Product(int id,String name, int quantity){
         this.id = id;
         this.name = name;

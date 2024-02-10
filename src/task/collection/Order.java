@@ -8,9 +8,9 @@ public class Order {
     //  Создайте класс Order с полями id, customer и totalAmount.
     //  Создайте метод, который будет принимать список заказов и выводить заказы с наибольшей суммой.
     //  Создайте метод, который будет принимать список заказов и возвращать общую сумму всех заказов.
-    int id;
-    String customer;
-    int totalAmount;
+    private int id;
+    private String customer;
+    private int totalAmount;
 
     public Order(int id, String customer, int totalAmount) {
         this.id = id;

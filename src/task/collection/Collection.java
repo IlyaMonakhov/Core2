@@ -22,7 +22,8 @@ public class Collection {
         setNamesFirst.add("Marina");
         setNamesFirst.add("Igor");
         setNamesFirst.add("Misha");
-        сheckElement(setNamesFirst);
+        String checkingName = "Zaur";
+        сheckElement(setNamesFirst , checkingName);
         System.out.println(setNamesFirst.contains("Zaur"));
         Set<String> setNamesSecond = new HashSet<>();
         setNamesSecond.add("Ilya");
@@ -37,9 +38,9 @@ public class Collection {
         mapNames.put(777, "Masha");
         System.out.println(mapNames.containsKey(666));
         int key = 555;
+        int key2 = 777;
         getValues(mapNames, key);
         System.out.println(mapNames.get(666));
-        int key2 = 777;
         removeMapNames(mapNames, key2);
         System.out.println(mapNames);
         Stack<String> details = new Stack<>();
@@ -48,11 +49,12 @@ public class Collection {
         details.push("mirror");
         details.push("pin");
         System.out.println(details);
-        addElementStack(details);
+        String elementCar = "brakes";
+        addElementStack(details,elementCar);
         System.out.println(details);
         popElementStack(details);
         System.out.println(details);
-        CheckStack(details);
+        сheckStack(details);
         System.out.println(details.isEmpty());
 
 
@@ -90,8 +92,8 @@ public class Collection {
     }
 
     // TODO: Проверить, содержит ли множество определенный элемент.
-    public static boolean сheckElement(Set<String> setNamesFirst) {
-        return setNamesFirst.contains("Zaur");
+    public static boolean сheckElement(Set<String> setNamesFirst,String checkingName) {
+        return setNamesFirst.contains(checkingName);
     }
 
     // TODO: Найти пересечение двух множеств.
@@ -111,9 +113,9 @@ public class Collection {
 
     // TODO: Получить все значения, связанные с определенным ключом.
     public static void getValues(Map<Integer, String> mapNames, int key) {
-        List<String> values = new ArrayList<>();
+        Map<Integer,String> values = new HashMap<>();
         if (mapNames.containsKey(key)) {
-            values.add(mapNames.get(key));
+            values.put(key, mapNames.get(key));
         } else {
             System.out.println("Значение для ключа не найдены " + key);
         }
@@ -126,8 +128,8 @@ public class Collection {
     }
 
     // TODO: Добавить элемент в очередь.
-    public static void addElementStack(Stack<String> details) {
-        details.push("brakes");
+    public static void addElementStack(Stack<String> details,String elementCar) {
+        details.push(elementCar);
     }
 
     // TODO: Получить и удалить первый элемент из очереди.
@@ -136,7 +138,7 @@ public class Collection {
     }
 
     // TODO: Проверить, пуста ли очередь.
-    public static boolean CheckStack(Stack<String> details) {
+    public static boolean сheckStack(Stack<String> details) {
         return details.isEmpty();
     }
 }

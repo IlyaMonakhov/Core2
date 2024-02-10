@@ -8,9 +8,9 @@ public class Task {
     //  Создайте класс Task с полями id, title и completed.
     //  Создайте метод, который будет принимать список задач и выводить только незавершенные задачи на экран.
     //  Создайте метод, который будет принимать список задач и возвращать список задач с определенным заголовком.
-    int id;
-    String title;
-    String completed;
+    private int id;
+    private String title;
+    private String completed;
     public Task(int id,String title,String completed){
         this.id = id;
         this.title = title;
@@ -23,9 +23,12 @@ public class Task {
         tasks.add(new Task(1,"Сложение","Выполнена"));
         tasks.add(new Task(2,"Вычитание","Не выполнена"));
         tasks.add(new Task(1,"Умножение","Выполнена"));
+
         printUnfinishedTasks(tasks);
-        System.out.println(tasks);
-        String title = "Не выполнена";
+
+        String title = "Умножение";
+        System.out.println("    ");
+
         getTasksWithSpecificTitle(tasks,title);
         System.out.println(getTasksWithSpecificTitle(tasks,title));
 
@@ -38,6 +41,7 @@ public class Task {
             }
         }
     }
+
     public static List<Task> getTasksWithSpecificTitle(List<Task> tasks, String title) {
         List<Task> tasksWithSpecificTitle = new ArrayList<>();
         for (Task task : tasks) {
