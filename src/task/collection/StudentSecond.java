@@ -16,19 +16,6 @@ public class StudentSecond {
         this.attendance = attendance;
     }
 
-    public static void main(String[] args) {
-        List<StudentSecond> studentSecondList = new ArrayList<>();
-        studentSecondList.add(new StudentSecond("Alina", 20));
-        studentSecondList.add(new StudentSecond("Alibaba", 78));
-        studentSecondList.add(new StudentSecond("Bob", 50));
-        studentSecondList.add(new StudentSecond("Join", 100));
-        minAttendance(studentSecondList);
-        averageAttendance(studentSecondList);
-        System.out.println(averageAttendance(studentSecondList));
-
-
-    }
-
 
     public static void minAttendance(List<StudentSecond> studentSecondList) {
         for (StudentSecond studentSecond : studentSecondList) {

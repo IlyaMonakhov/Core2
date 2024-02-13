@@ -17,21 +17,6 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public static void main(String[] args) {
-        List<Product> products = new ArrayList<>();
-        products.add(new Product(1,"Oil",0));
-        products.add(new Product(2,"Milk",68));
-        products.add(new Product(3,"Chocolate",100));
-        products.add(new Product(4,"Potato",1500));
-        printProductsWithZeroQuantity(products);
-        totalQuantity(products);
-        System.out.println(totalQuantity(products));
-
-
-
-
-
-    }
     public static void printProductsWithZeroQuantity(List<Product> products){
         for (Product product : products){
             if (product.quantity == 0){

@@ -3,6 +3,17 @@ package task.collection;
 import java.util.*;
 import java.util.Map;
 
+import static task.collection.Order.printOrdersWithHighestTotalAmount;
+import static task.collection.Order.sumTotalAmount;
+import static task.collection.Product.printProductsWithZeroQuantity;
+import static task.collection.Product.totalQuantity;
+import static task.collection.Student.listMaxAgeStudent;
+import static task.collection.Student.printListStudents;
+import static task.collection.StudentSecond.averageAttendance;
+import static task.collection.StudentSecond.minAttendance;
+import static task.collection.Task.getTasksWithSpecificTitle;
+import static task.collection.Task.printUnfinishedTasks;
+
 
 public class Collection {
     public static void main(String[] args) {
@@ -72,6 +83,78 @@ public class Collection {
         сheckStack(details);
 
         System.out.println(details.isEmpty());
+
+
+        List<Order> Orders = new ArrayList<>();
+        Orders.add(new Order(1, "Ilya", 100));
+        Orders.add(new Order(2, "Nikita", 200));
+        Orders.add(new Order(3, "Ivan", 150));
+        Orders.add(new Order(4,"Misha",5000));
+
+        printOrdersWithHighestTotalAmount(Orders);
+
+        int totalAmount = sumTotalAmount(Orders);
+        System.out.println("Total amount of all orders: " + totalAmount);
+
+
+
+        List<Product> products = new ArrayList<>();
+        products.add(new Product(1,"Oil",0));
+        products.add(new Product(2,"Milk",68));
+        products.add(new Product(3,"Chocolate",100));
+        products.add(new Product(4,"Potato",1500));
+        printProductsWithZeroQuantity(products);
+        totalQuantity(products);
+        System.out.println(totalQuantity(products));
+
+
+
+
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("Masha", 25));
+        students.add(new Student("Egor",30));
+        students.add(new Student("Zaur",24));
+        students.add(new Student("Marina",23));
+        printListStudents(students);
+        System.out.println("    ");
+
+        int minAge = 26;
+
+        listMaxAgeStudent(students,minAge);
+        System.out.println("Возраст больше 26");
+
+        List<Student> maxAgeStudents = listMaxAgeStudent(students, minAge);
+        for (Student student : maxAgeStudents) {
+            System.out.println(student.name + student.age);
+        }
+
+
+
+
+        List<StudentSecond> studentSecondList = new ArrayList<>();
+        studentSecondList.add(new StudentSecond("Alina", 20));
+        studentSecondList.add(new StudentSecond("Alibaba", 78));
+        studentSecondList.add(new StudentSecond("Bob", 50));
+        studentSecondList.add(new StudentSecond("Join", 100));
+        minAttendance(studentSecondList);
+        averageAttendance(studentSecondList);
+        System.out.println(averageAttendance(studentSecondList));
+
+
+
+
+        List<Task> tasks = new ArrayList<>();
+        tasks.add(new Task(1,"Сложение","Выполнена"));
+        tasks.add(new Task(2,"Вычитание","Не выполнена"));
+        tasks.add(new Task(1,"Умножение","Выполнена"));
+
+        printUnfinishedTasks(tasks);
+
+        String title = "Умножение";
+        System.out.println("    ");
+
+        getTasksWithSpecificTitle(tasks,title);
+        System.out.println(getTasksWithSpecificTitle(tasks,title));
 
 
     }
@@ -161,6 +244,7 @@ public class Collection {
 //  Создайте класс Order с полями id, customer и totalAmount.
 //  Создайте метод, который будет принимать список заказов и выводить заказы с наибольшей суммой.
 //  Создайте метод, который будет принимать список заказов и возвращать общую сумму всех заказов.
+
 
 
 // TODO: Управление задачами:

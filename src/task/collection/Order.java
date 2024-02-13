@@ -18,19 +18,6 @@ public class Order {
         this.totalAmount = totalAmount;
     }
 
-    public static void main(String[] args) {
-        List<Order> Orders = new ArrayList<>();
-        Orders.add(new Order(1, "Ilya", 100));
-        Orders.add(new Order(2, "Nikita", 200));
-        Orders.add(new Order(3, "Ivan", 150));
-        Orders.add(new Order(4,"Misha",5000));
-
-        printOrdersWithHighestTotalAmount(Orders);
-
-        int totalAmount = sumTotalAmount(Orders);
-        System.out.println("Total amount of all orders: " + totalAmount);
-    }
-
     public static void printOrdersWithHighestTotalAmount(List<Order> Orders) {
         int maxTotalAmount = Integer.MIN_VALUE;
         for (Order order : Orders) {

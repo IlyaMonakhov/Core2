@@ -17,23 +17,6 @@ public class Task {
         this.completed = completed;
 
     }
-
-    public static void main(String[] args) {
-        List<Task> tasks = new ArrayList<>();
-        tasks.add(new Task(1,"Сложение","Выполнена"));
-        tasks.add(new Task(2,"Вычитание","Не выполнена"));
-        tasks.add(new Task(1,"Умножение","Выполнена"));
-
-        printUnfinishedTasks(tasks);
-
-        String title = "Умножение";
-        System.out.println("    ");
-
-        getTasksWithSpecificTitle(tasks,title);
-        System.out.println(getTasksWithSpecificTitle(tasks,title));
-
-
-    }
     public static void printUnfinishedTasks(List<Task> tasks){
         for (Task task : tasks) {
             if (task.completed.equals("Не выполнена")) {
@@ -49,7 +32,7 @@ public class Task {
                 tasksWithSpecificTitle.add(task);
             }
         }
-        return tasksWithSpecificTitle;
+        return tasks;
     }
 }
 
