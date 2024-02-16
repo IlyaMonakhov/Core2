@@ -17,6 +17,8 @@ public class Task {
         this.completed = completed;
 
     }
+
+
     public static void printUnfinishedTasks(List<Task> tasks){
         for (Task task : tasks) {
             if (task.completed.equals("Не выполнена")) {

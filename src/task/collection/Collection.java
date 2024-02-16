@@ -18,6 +18,10 @@ import static task.collection.Task.printUnfinishedTasks;
 public class Collection {
     public static void main(String[] args) {
         ArrayList<Integer> listNumber = new ArrayList<>();
+        // todo вообще корректнее будет писать
+        List<Integer> listNbrs = new ArrayList<>(); // вспоминаем полиморфизм
+        // Так же у листа есть мега удобный и приятный метод
+        listNbrs = List.of(1, 2, 3); // всё в одну строчку - коротко и ясно
         listNumber.add(12);
         listNumber.add(55);
         listNumber.add(33);
@@ -31,6 +35,8 @@ public class Collection {
         System.out.println(listNumber);
 
         Set<String> setNamesFirst = new HashSet<>();
+        // Set.of
+        Set.of("test");
         setNamesFirst.add("Zaur");
         setNamesFirst.add("Marina");
         setNamesFirst.add("Igor");
@@ -44,18 +50,14 @@ public class Collection {
         setNamesSecond.add("Ilya");
         setNamesSecond.add("Egor");
         setNamesSecond.add("Denis");
-
         System.out.println(intersection(setNamesFirst, setNamesSecond));
-
         Map<Integer, String> mapNames = new HashMap<>();
         mapNames.put(125, "Ivan");
         mapNames.put(458, "Ilya");
         mapNames.put(555, "Igor");
         mapNames.put(666, "Egor");
         mapNames.put(777, "Masha");
-
         System.out.println(mapNames.containsKey(666));
-
         int key = 555;
         int key2 = 777;
 
@@ -187,6 +189,8 @@ public class Collection {
     // TODO: Отсортировать список в порядке убывания.
     public static ArrayList<Integer> sortDescendingOrder(ArrayList<Integer> listNumber) {
         Collections.sort(listNumber, Collections.reverseOrder());
+        // вот так тоже можно listNumber.sort(Collections.reverseOrder());
+        // логично сделать метод войд и не возвращать ничего ибо сортируешь по ссылке
         return listNumber;
     }
 
@@ -206,6 +210,7 @@ public class Collection {
     }
 
     // TODO: Проверить, содержит ли карта определенный ключ.
+    // todo: логичнее назвать checkKey
     public static boolean сheckingKey(Map<Integer, String> mapNames, int key) {
         return mapNames.containsKey(key);
     }

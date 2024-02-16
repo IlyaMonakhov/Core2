@@ -3,6 +3,7 @@ package task.collection;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Order {
     // TODO: Учет заказов:
     //  Создайте класс Order с полями id, customer и totalAmount.
