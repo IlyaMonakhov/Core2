@@ -4,6 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentSecond {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAttendance() {
+        return attendance;
+    }
+
+    public void setAttendance(int attendance) {
+        this.attendance = attendance;
+    }
+
     // TODO: Учет посещаемости:
     //  Создайте класс Student с полями name и attendance.
     //  Создайте метод, который будет принимать список студентов и выводить студентов с наихудшей посещаемостью.

@@ -5,6 +5,30 @@ import java.util.List;
 
 
 public class Order {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(String customer) {
+        this.customer = customer;
+    }
+
+    public int getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(int totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
     // TODO: Учет заказов:
     //  Создайте класс Order с полями id, customer и totalAmount.
     //  Создайте метод, который будет принимать список заказов и выводить заказы с наибольшей суммой.

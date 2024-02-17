@@ -4,6 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     // TODO: Создание списка студентов:
     //  Создайте класс Student с полями name и age.
     //  Создайте метод, который будет принимать список студентов и выводить их на экран.

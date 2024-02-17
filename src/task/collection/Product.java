@@ -4,6 +4,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Product {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     // TODO: Учет товаров на складе:
     //  Создайте класс Product с полями id, name и quantity.
     //  Создайте метод, который будет принимать список товаров и выводить только товары с нулевым количеством на складе.

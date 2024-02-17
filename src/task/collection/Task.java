@@ -4,6 +4,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Task {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(String completed) {
+        this.completed = completed;
+    }
+
     // TODO: Управление задачами:
     //  Создайте класс Task с полями id, title и completed.
     //  Создайте метод, который будет принимать список задач и выводить только незавершенные задачи на экран.
