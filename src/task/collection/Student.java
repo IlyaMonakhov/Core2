@@ -8,8 +8,8 @@ public class Student {
     //  Создайте класс Student с полями name и age.
     //  Создайте метод, который будет принимать список студентов и выводить их на экран.
     //  Создайте метод, который будет принимать список студентов и возвращать список студентов, у которых возраст больше определенного значения.
-    public String name;
-    public int age;
+    String name;
+    int age;
     public Student(String name,int age) {
         this.name = name;
         this.age = age;

@@ -16,6 +16,7 @@ public class Order {
         this.id = id;
         this.customer = customer;
         this.totalAmount = totalAmount;
+
     }
 
     public static void printOrdersWithHighestTotalAmount(List<Order> Orders) {
